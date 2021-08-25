@@ -1,4 +1,4 @@
-# codecademy-user-directory-api
+
 Node/Express/PostgreSQL REST API to provide basic functionality of a user directory.  Users can add new users to the directory, modify existing users, delete users, and view users.
 
 ## Running the app

@@ -1,0 +1,108 @@
+swagger: "2.0"
+
+info:
+  description: "Backend REST API using Node, Express, and PostgreSQL"
+  version: "1.0.0"
+  title: "User Directory REST API"
+  
+servers:
+  - url: http://api.example.com/v1
+    description: Optional server description, e.g. Main (production) server
+  - url: http://staging-api.example.com
+    description: Optional server description, e.g. Internal staging server for testing
+
+schemes: 
+  - http
+
+host: localhost:4000
+
+basePath: "/"
+
+paths:
+  /users:
+    get:
+      summary: "List user records"
+      description: "Lists all user records"
+      produces:
+        - "application/json"
+      parameters:
+      responses:
+        200:
+          description: 200 Success
+          schema:
+            type: array
+            items:
+        500:
+          description: 500 Internal Server Error
+          schema:
+            type: object
+            items:
+    post:
+      summary: "Create new user"
+      description: "Creates new user and adds it to the directory"
+      produces:
+        - "application/json"
+      parameters:
+      responses:
+        200:
+          description: 200 Success
+          schema:
+            type: object
+            items:
+        500:
+          description: 500 Internal Server Error
+          schema:
+            type: object
+            items:
+  /users/{userId}:
+    get:
+      summary: "Get user record"
+      description: "Get a single user record by the user's ID"
+      produces:
+        - "application/json"
+      parameters:
+      responses:
+        200:
+          description: 200 Success
+          schema:
+            type: object
+            items:
+        500:
+          description: 500 Internal Server Error
+          schema:
+            type: object
+            items:
+    put:
+      summary: "Update user record"
+      description: "Update a user record based on the user's ID"
+      produces:
+        - "application/json"
+      parameters:
+      responses:
+        200:
+          description: 200 Success
+          schema:
+            type: object
+            items:
+        500:
+          description: 500 Internal Server Error
+          schema:
+            type: object
+            items:
+    delete:
+      summary: "Delete user record"
+      description: "Delete a user record based on the user's ID"
+      produces:
+        - "application/json"
+      parameters:
+      responses:
+        200:
+          description: 200 Success
+          schema:
+            type: object
+            items:
+        500:
+          description: 500 Internal Server Error
+          schema:
+            type: object
+            items:
